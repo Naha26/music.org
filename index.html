@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesotho Finest Mixes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header>
+        <h1>Lesotho Finest Mixes</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by DJ or description...">
+            <button onclick="searchMixes()">Search</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="fetchMixes()">All Mixes</a></li>
+            <li><a href="#deep-house">Deep House</a></li>
+            <li><a href="#piano">Piano</a></li>
+            <li><a href="#hip-hop">Hip-Hop</a></li>
+            <li><a href="#rnb">RnB</a></li>
+        </ul>
+    </nav>
+
+    <section id="upload-section">
+        <h2>Upload Your Mix</h2>
+        <form id="upload-form">
+            <div class="form-group">
+                <label for="dj-name">DJ Name:</label>
+                <input type="text" id="dj-name" required placeholder="Your DJ name">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" required placeholder="Mix description (genre, mood, etc.)"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" required placeholder="Where are you from?">
+            </div>
+
+            <div class="form-group">
+                <label for="audio-file">Audio File (max 50MB):</label>
+                <input type="file" id="audio-file" accept="audio/*" required>
+            </div>
+
+            <button type="submit" id="upload-button">Upload Mix</button>
+            <div id="upload-status"></div>
+        </form>
+    </section>
+
+    <main id="mixes-container">
+        <div class="loading-message">Loading mixes...</div>
+        <!-- Mixes will be dynamically added here -->
+    </main>
+
+    <div id="music-player-container">
+        <audio id="music-player" controls>
+            Your browser does not support the audio element.
+        </audio>
+        <div class="player-controls">
+            <button id="download-button">Download This Mix</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Disclaimer: Any music uploaded is not owned by this website.</p>
+        <p>&copy; 2024 Lesotho Finest Mixes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

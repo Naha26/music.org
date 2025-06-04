@@ -1,0 +1,55 @@
+
+/* Add these to your existing CSS */
+
+/* Music Player Styles */
+#music-player {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+#download-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: none;
+}
+
+#music-player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Upload Form Improvements */
+#upload-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#upload-form button:hover,
+#download-button:hover,
+.search-bar button:hover {
+    background-color: #3e8e41;
+}
+
+/* Mix Card Improvements */
+.mix-card button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.mix-card button:hover {
+    background-color: #3e8e41;
+}
